@@ -8,6 +8,7 @@ import rehypeExternalLinks from 'rehype-external-links'
 import expressiveCode from 'astro-expressive-code'
 import { expressiveCodeOptions } from './src/site.config'
 import icon from 'astro-icon'
+import favicons from "astro-favicons"
 
 import vercel from '@astrojs/vercel/serverless'
 
@@ -21,7 +22,23 @@ export default defineConfig({
 		}),
 		sitemap(),
 		mdx(),
-		icon()
+		icon(),
+		favicons({
+			masterPicture: "./src/icons/favicon.svg",
+			// emitAssets: true,
+			appName: "",
+			appShortName: "",
+			appDescription: "",
+			// dir:"auto",
+			lang: "en-US",
+			// display: "standalone",
+			// orientation: "any",
+			// start_url: "/?homescreen=1",
+			background: "#fff",
+			theme_color: "#fff",
+			faviconsDarkMode: false,
+			// appleStatusBarStyle: "black-translucent",
+		}),
 	],
 	markdown: {
 		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
