@@ -1,7 +1,7 @@
 {
-	"name": "astro-blog",
+	"name": "web-resume",
 	"type": "module",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"scripts": {
 		"dev": "astro check --watch & astro dev",
 		"start": "astro dev",
