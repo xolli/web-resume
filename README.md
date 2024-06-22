@@ -17,34 +17,7 @@
 
 ## Credits
 
-- [astro-theme-cactus](https://github.com/chrismwilliams/astro-theme-cactus) for blog design
 - [minirezume-framer](https://minirezume.framer.website/) for resume homepage design
-
-## Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
-├── src/
-    ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-|   ├── pages/
-|   ├── styles/
-|   ├── utils/
-|   ├── site.config.ts
-│   └── types.ts
-├── .elintrc.cjs
-├── .gitignore
-├── .prettierignore
-├── package.json
-├── prettier.config.cjs
-├── README.md
-├── tailwind.config.js
-└── tsconfig.json
-```
 
 ## Editing guide
 
@@ -63,14 +36,6 @@ To edit page components found site-wide such as the card used in the homepage, e
 ### Layouts
 
 To edit the base layouts of all pages, edit the `src/layouts/BaseLayout.astro` file.
-
-To edit the layout of a blog article, edit the `src/layouts/BlogPost.astro` file.
-
-### Blog content
-
-To add blog content, insert `.md` files in the `src/content/` directory.
-
-To add images in blog articles, insert a folder in the `src/content/` directory, add both the `.md` and image files into the new folder, and reference the image in your `.md` file.
 
 ## Theming
 

@@ -3,55 +3,85 @@ import PageLayout from '@/layouts/BaseLayout.astro'
 import ToolSection from '@/components/ToolSection.astro'
 import Button from '@/components/Button.astro'
 
+const DEVELOPMENT = [
+	{
+		name: 'IntelliJ IDEA',
+		description: 'IDE',
+		href: 'https://www.jetbrains.com/idea/',
+		iconPath: 'intellij-idea',
+	},
+	{
+		name: 'Sublime Text',
+		description: 'Text editor',
+		href: 'https://www.sublimetext.com/',
+		iconPath: 'sublimetext',
+	}
+]
+
+const SYSTEM = [
+	{
+		name: 'Manjaro',
+		description: 'Linux operating system',
+		href: 'https://manjaro.org/',
+		iconPath: 'manjaro',
+	},
+	{
+		name: 'KDE',
+		description: 'Desktop environment',
+		href: 'https://kde.org/plasma-desktop/',
+		iconPath: 'kde',
+	},
+	{
+		name: 'Android',
+		description: 'Mobile operating system',
+		href: 'https://www.android.com/',
+		iconPath: 'android',
+	}
+]
+
+const PRODUCTIVITY = [
+	{
+		name: 'KeePassXC',
+		description: 'Password Manager',
+		href: 'https://keepassxc.org/',
+		iconPath: 'keepass',
+	},
+	{
+		name: 'Syncthing',
+		description: 'File synchronization',
+		href: 'https://syncthing.net/',
+		iconPath: 'syncthing',
+	},
+]
+
 const DESIGN = [
 	{
 		name: 'Figma',
 		description: 'Design Tool',
 		href: 'https://www.figma.com/',
 		iconPath: 'figma',
-		iconBgColour: '#000001'
+	},
+	{
+		name: 'GIMP',
+		description: 'Image editor',
+		href: 'https://www.gimp.org/',
+		iconPath: 'gimp',
 	}
 ]
 
-const PRODUCTIVITY = [
+const OTHER = [
 	{
-		name: 'Arc',
-		description: 'Browser',
-		href: 'https://arc.net/',
-		iconPath: 'arc',
-		iconBgColour: '#414350'
+		name: 'Firefox',
+		description: 'Web browser',
+		href: 'https://mozilla.org/firefox',
+		iconPath: 'firefox',
 	},
 	{
-		name: 'Notion',
-		description: 'Note Taking',
-		href: 'https://www.notion.so/product',
-		iconPath: 'notion',
-		iconBgColour: '#EFEFEE'
+		name: 'OsmAnd',
+		description: 'Map and navigation app',
+		href: 'https://osmand.net/',
+		iconPath: 'osmand',
 	},
-	{
-		name: 'Obsidian',
-		description: 'Long-form Writing',
-		href: 'https://obsidian.md/',
-		iconPath: 'obsidian',
-		iconBgColour: '#7A3EE8'
-	}
-]
-
-const DEVELOPMENT = [
-	{
-		name: 'VS Code',
-		description: 'IDE',
-		href: 'https://code.visualstudio.com/',
-		iconPath: 'vscode',
-		iconBgColour: '#2C2C32'
-	},
-	{
-		name: 'ChatGPT',
-		description: 'AI',
-		href: 'https://chat.openai.com/',
-		iconPath: 'chatgpt',
-		iconBgColour: '#06A67F'
-	}
 ]
 ---
 
@@ -76,12 +106,14 @@ const DEVELOPMENT = [
 		<div class='mt-5 flex w-full flex-col gap-y-10'>
 			<div>
 				<h1 class='mb-1 text-2xl font-bold'>Tools</h1>
-				<p>Tools and software I use daily</p>
+				<p>Software that I like and use</p>
 			</div>
 
-			<ToolSection title='Design' tools={DESIGN} />
-			<ToolSection title='Productivity' tools={PRODUCTIVITY} />
 			<ToolSection title='Development' tools={DEVELOPMENT} />
+			<ToolSection title='System' tools={SYSTEM} />
+			<ToolSection title='Productivity' tools={PRODUCTIVITY} />
+			<ToolSection title='Design' tools={DESIGN} />
+			<ToolSection title='Other' tools={OTHER} />
 		</div>
 	</div>
 </PageLayout>
