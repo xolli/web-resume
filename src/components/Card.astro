@@ -1,5 +1,4 @@
 ---
-import type { ImageMetadata } from 'astro'
 import { cn } from '@/utils'
 
 const {
@@ -9,14 +8,8 @@ const {
 	heading,
 	subheading,
 	date,
-	imagePath,
 } = Astro.props
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
 
-if (imagePath) {
-	if (!images[imagePath])
-		throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`)
-}
 ---
 
 <Tag

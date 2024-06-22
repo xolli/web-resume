@@ -10,11 +10,9 @@ import { expressiveCodeOptions } from './src/site.config'
 import icon from 'astro-icon'
 import favicons from "astro-favicons"
 
-import vercel from '@astrojs/vercel/serverless'
-
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.me',
+	site: 'https://xolli.fun',
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		tailwind({
@@ -58,8 +56,5 @@ export default defineConfig({
 		}
 	},
 	prefetch: true,
-	output: 'server',
-	adapter: vercel({
-		webAnalytics: { enabled: true }
-	})
+	output: 'static',
 })
