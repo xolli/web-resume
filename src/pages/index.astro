@@ -15,8 +15,10 @@ const frontend = ['Typescript', 'React', 'Next.js', 'Astro']
 const others = ['Docker', 'Podman', 'Gitlab CI', 'Linux', 'Nginx', 'Grafana', 'Prometheus']
 
 const diffDays = Math.floor(Math.abs(new Date() - new Date('02/01/2022')) / (1000 * 60 * 60 * 24));
-const experienceYears = Math.floor(diffDays / 365)
-const experienceMonths = Math.round((diffDays - experienceYears * 365) / 30)
+let experienceYears = Math.floor(diffDays / 365)
+let experienceMonths = Math.round((diffDays - experienceYears * 365) / 30)
+experienceYears += experienceMonths == 12 ? 1 : 0;
+experienceMonths %= 12;
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
