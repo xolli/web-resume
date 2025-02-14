@@ -1,7 +1,0 @@
-xolli.fun {
-	root * /srv
-	file_server
-}
-www.xolli.fun {
-	redir https://xolli.fun{uri}
-}

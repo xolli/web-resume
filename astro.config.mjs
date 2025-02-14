@@ -12,13 +12,13 @@ import favicons from "astro-favicons"
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://xolli.fun',
+	site: 'https://cv.xolli.fun',
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		tailwind({
 			applyBaseStyles: false
 		}),
-		sitemap(),
+		sitemap({}),
 		mdx(),
 		icon(),
 		favicons({
