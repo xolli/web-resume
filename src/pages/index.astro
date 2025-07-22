@@ -13,10 +13,6 @@ const backend = ['Java', 'Spring Framework', 'Hibernate', 'JUnit', 'Python', 'C#
 const databases = ['PostgreSQL', 'MongoDB', 'Elasticsearch']
 const frontend = ['Typescript', 'React', 'Next.js', 'Astro']
 const others = ['Docker', 'Podman', 'Gitlab CI', 'Linux', 'Nginx', 'Grafana', 'Prometheus']
-
-const diff = new Date(new Date().getTime() - new Date('02/01/2022').getTime());
-let experienceYears = diff.getUTCFullYear() - 1970
-let experienceMonths = diff.getUTCMonth()
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
@@ -78,7 +74,8 @@ let experienceMonths = diff.getUTCMonth()
 			<Card
 				heading='Full Stack Developer'
 				subheading='SCD Company - Armenia'
-				date=`Feb 2022 - Present (${experienceYears} years${experienceMonths != 0 ? " " + experienceMonths + " months" : ""})`
+				date=`Feb 2022 - Present`
+				dateId="experience-date"
 				imageClass='h-12 w-auto md:-left-16'
 			>
 				<div class="text-muted-foreground">
@@ -91,6 +88,20 @@ let experienceMonths = diff.getUTCMonth()
 					</ul>
 				</div>
 			</Card>
+			<script>
+				const start = new Date('2022-02-01');
+				const now = new Date();
+				const diff = new Date(now.getTime() - start.getTime());
+				const years = diff.getUTCFullYear() - 1970;
+				const months = diff.getUTCMonth();
+				const text = `Feb 2022 - Present (${years} year${years !== 1 ? 's' : ''}${months !== 0 ? ` ${months} month${months !== 1 ? 's' : ''}` : ''})`;
+				document.addEventListener('DOMContentLoaded', () => {
+					const element = document.getElementById('experience-date');
+					if (element) {
+						element.textContent = text;
+					}
+				});
+			</script>
 		</Section>
 
 		<Section title='Education'>
