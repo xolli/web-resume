@@ -9,10 +9,10 @@ import { Image } from 'astro:assets'
 import photo from '../assets/photo.jpg'
 
 const languages = ['English B1', 'Russian']
-const backend = ['Java', 'Spring Framework', 'Hibernate', 'JUnit', 'Python', 'C#', 'LINQ', 'Entity Framework']
+const backend = ['Java', 'Spring Framework', 'Hibernate', 'Liquibase', 'Flyway', 'REST API', 'Tomcat', 'JUnit', 'Python', 'C#']
 const databases = ['PostgreSQL', 'MongoDB', 'Elasticsearch']
-const frontend = ['Typescript', 'React', 'Next.js', 'Astro']
-const others = ['Docker', 'Podman', 'Gitlab CI', 'Linux', 'Nginx', 'Grafana', 'Prometheus']
+const frontend = ['React.js', 'Typescript', 'Next.js', 'Figma', 'Vite', 'npm / yarn', 'Tailwind CSS']
+const others = ['Docker', 'Gitlab CI', 'Git', 'Linux', 'Bash', 'Python', 'Google Cloud', 'Nginx', 'Grafana', 'Prometheus', 'Jira', 'Confluence', 'Scrum', 'Data structures']
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
@@ -28,7 +28,10 @@ const others = ['Docker', 'Podman', 'Gitlab CI', 'Linux', 'Nginx', 'Grafana', 'P
 			<div class='flex flex-col items-center gap-y-4'>
 				<h1 class='text-3xl font-bold'>Igor Kazak</h1>
 				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-					<Label title='SCD Company'>
+					<Label title='SCD Company'
+								 as='a'
+								 href='https://scd-company.com/'
+								 target='_blank'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'>
 							<path
 								fill='currentColor'
@@ -64,28 +67,58 @@ const others = ['Docker', 'Podman', 'Gitlab CI', 'Linux', 'Nginx', 'Grafana', 'P
 			</div>
 		</section>
 
-		<Section title='About'>
-			<p class='text-muted-foreground'>
-				I am an experienced Full Stack Developer with a skill set in Java and TypeScript + React. In my current role, I am responsible for developing, documenting as well as managing CI/CD tasks
-			</p>
+		<Section title='Education'>
+			<Card
+				heading='Novosibirsk State University (NSU)'
+				subheading="Bachelor's degree, Department of Information Technologies"
+				date='2018 - 2022'
+				imageClass='h-12 w-auto md:-left-16'
+			>
+				<p class='text-muted-foreground'>
+					I acquired fundamental knowledge in both Computer Science and Mathematics
+				</p>
+			</Card>
 		</Section>
 
 		<Section title='Experience'>
 			<Card
-				heading='Full Stack Developer'
-				subheading='SCD Company - Armenia'
+				heading='Backend Java Developer'
+				subheading='SCD Company, Armenia'
 				date=`Feb 2022 - Present`
 				dateId="experience-date"
 				imageClass='h-12 w-auto md:-left-16'
 			>
 				<div class="text-muted-foreground">
-					<p>I am involved in different projects and am responsible for different parts of the work:</p>
+					<b>Achievements</b>
 					<ul class='ml-4 list-disc'>
-						<li>Frontend</li>
-						<li>Backend</li>
-						<li>CI/CD operations</li>
-						<li>Writing documentation</li>
+						<li>Simplified the project's architecture and documented its core logic during a major refactoring. This reduced the onboarding time for new developers and accelerated feature development</li>
+						<li>Implemented semantic search in Elasticsearch using vectorized job descriptions, which improved recommendation quality for end users</li>
+						<li>Implemented automatic tag suggestion for administrators using fuzzy matching on job titles and descriptions, reducing manual effort and analysis time</li>
+						<li>Automated the generation of dependency reports across all modules (using Gitlab CI/CD, Dependency Check Maven Plugin, Npm Audit Export), which simplified product maintenance and accelerated the fixing of vulnerabilities caused by third-party libraries</li>
+						<li>Developed a Dagster pipeline that analyzed user clicks on different ads and generated regular reports, helping to optimize advertising costs</li>
 					</ul>
+					<b>Responsibilities</b>
+					<ul class='ml-4 list-disc'>
+						<li>Upgraded the backend of the application from outdated versions of Spring Framework, Java, PostgreSQL, MongoDB, Elasticsearch, and Tomcat</li>
+						<li>Documented infrastructure and wrote internal instructions and guides in Confluence</li>
+						<li>Deployed and developed regularly scheduled Google Cloud Functions; set up reporting and organized data storage in BigQuery</li>
+						<li>Maintaining stable production environment on Linux with Docker</li>
+						<li>Set up CI/CD pipelines in GitLab for building images, running tests</li>
+						<li>Configured infrastructure monitoring with Grafana and Prometheus; collected logs using Promtail and Loki</li>
+						<li>Assessed MVP feasibility based on requirements, selected appropriate technologies with justification, and designed the planned application architecture</li>
+						<li>Mentored a junior developer</li>
+					</ul>
+				</div>
+			</Card>
+			<Card
+				heading='Laboratory assistant'
+				subheading='Institute of Geology and Mineralogy, Novosibirsk'
+				date=`September 2021 - May 2022`
+				dateId="experience-date"
+				imageClass='h-12 w-auto md:-left-16'
+			>
+				<div class="text-muted-foreground">
+					Implemented a Python plugin for QGIS that corrects elevation data of rivers and lakes to ensure hydrological consistency
 				</div>
 			</Card>
 			<script>
@@ -104,17 +137,19 @@ const others = ['Docker', 'Podman', 'Gitlab CI', 'Linux', 'Nginx', 'Grafana', 'P
 			</script>
 		</Section>
 
-		<Section title='Education'>
-			<Card
-				heading='Novosibirsk State University (NSU)'
-				subheading="Bachelor's degree, Department of Information Technologies"
-				date='2018 - 2022'
-				imageClass='h-12 w-auto md:-left-16'
-			>
-				<p class='text-muted-foreground'>
-					I acquired fundamental knowledge in both Computer Science and Mathematics
-				</p>
-			</Card>
+		<Section title='About Me'>
+			<ul class='ml-4 list-disc'>
+				<li>
+					<p class='text-muted-foreground'>
+						In my free time, I explore new programming languages like Rust and C#, which I also use for personal projects outside of work. I'm a Linux enthusiast and currently learning to play the ukulele
+					</p>
+				</li>
+				<li>
+					<p class='text-muted-foreground'>
+						Open to hybrid or remote roles only. Not considering relocation from Yerevan
+					</p>
+				</li>
+			</ul>
 		</Section>
 
 		<Section title='Skills'>
