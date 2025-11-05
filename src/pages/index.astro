@@ -1,4 +1,4 @@
----
+	---
 import PageLayout from '../layouts/BaseLayout.astro'
 import Section from '../components/Section.astro'
 import Card from '../components/Card.astro'
@@ -8,7 +8,7 @@ import SkillLayout from '../components/SkillLayout.astro'
 import { Image } from 'astro:assets'
 import photo from '../assets/photo.jpg'
 
-const languages = ['English B1', 'Russian']
+const languages = ['English B2', 'Russian']
 const backend = ['Java', 'Spring Framework', 'Hibernate', 'Liquibase', 'Flyway', 'REST API', 'Tomcat', 'JUnit', 'Python', 'C#']
 const databases = ['PostgreSQL', 'MongoDB', 'Elasticsearch']
 const frontend = ['React.js', 'Typescript', 'Next.js', 'Figma', 'Vite', 'npm / yarn', 'Tailwind CSS']
@@ -69,9 +69,9 @@ const others = ['Docker', 'Gitlab CI', 'Git', 'Linux', 'Bash', 'Python', 'Google
 
 		<Section title='Experience'>
 			<Card
-				heading='Backend Java Developer'
+				heading='Fullstack Java Developer'
 				subheading='SCD Company, Armenia'
-				date=`Feb 2022 - Present`
+				date=`Feb 2022 - Oct 2025`
 				dateId="experience-date"
 				imageClass='h-12 w-auto md:-left-16'
 			>
@@ -111,11 +111,11 @@ const others = ['Docker', 'Gitlab CI', 'Git', 'Linux', 'Bash', 'Python', 'Google
 			</Card>
 			<script>
 				const start = new Date('2022-02-01');
-				const now = new Date();
+				const now = new Date('2025-10-01');
 				const diff = new Date(now.getTime() - start.getTime());
 				const years = diff.getUTCFullYear() - 1970;
 				const months = diff.getUTCMonth();
-				const text = `Feb 2022 - Present (${years} year${years !== 1 ? 's' : ''}${months !== 0 ? ` ${months} month${months !== 1 ? 's' : ''}` : ''})`;
+				const text = `Feb 2022 - Oct 2025 (${years} year${years !== 1 ? 's' : ''}${months !== 0 ? ` ${months} month${months !== 1 ? 's' : ''}` : ''})`;
 				document.addEventListener('DOMContentLoaded', () => {
 					const element = document.getElementById('experience-date');
 					if (element) {
