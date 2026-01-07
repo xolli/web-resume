@@ -69,9 +69,9 @@ const others = ['Docker', 'GitLab CI/CD', 'Git', 'Linux', 'Google Cloud', 'Nginx
 
 		<Section title='Experience'>
 			<Card
-				heading='Fullstack Java Developer'
+				heading='Full-Stack Java Developer'
 				subheading='SCD Company, Armenia'
-				date=`Feb 2022 - Oct 2025`
+				date=`Feb 2022 - Oct 2025 (3 years 7 months)`
 				dateId="experience-date"
 				imageClass='h-12 w-auto md:-left-16'
 			>
@@ -82,7 +82,7 @@ const others = ['Docker', 'GitLab CI/CD', 'Git', 'Linux', 'Google Cloud', 'Nginx
 						<li>Developed a web application optimized for visualizing large-scale graphs using PixiJS, HTML5, and WebGL</li>
 						<li>Documented infrastructure and wrote internal instructions and guides in Confluence</li>
 						<li>Deployed and developed regularly scheduled Google Cloud Functions; set up reporting and organized data storage in BigQuery</li>
-						<li>Set up Maintaining stable production environment on Linux with Docker</li>
+						<li>Maintained a stable production environment</li>
 						<li>Set up CI/CD pipelines in GitLab for building images, running tests</li>
 						<li>Configured infrastructure monitoring with Grafana and Prometheus; collected logs using Promtail and Loki</li>
 						<li>Assessed MVP feasibility based on requirements, selected appropriate technologies with justification, and designed the planned application architecture</li>
@@ -109,20 +109,6 @@ const others = ['Docker', 'GitLab CI/CD', 'Git', 'Linux', 'Google Cloud', 'Nginx
 					Implemented a Python plugin for QGIS that corrects elevation data of rivers and lakes to ensure hydrological consistency
 				</div>
 			</Card>
-			<script>
-				const start = new Date('2022-02-01');
-				const now = new Date('2025-10-01');
-				const diff = new Date(now.getTime() - start.getTime());
-				const years = diff.getUTCFullYear() - 1970;
-				const months = diff.getUTCMonth();
-				const text = `Feb 2022 - Oct 2025 (${years} year${years !== 1 ? 's' : ''}${months !== 0 ? ` ${months} month${months !== 1 ? 's' : ''}` : ''})`;
-				document.addEventListener('DOMContentLoaded', () => {
-					const element = document.getElementById('experience-date');
-					if (element) {
-						element.textContent = text;
-					}
-				});
-			</script>
 		</Section>
 
 		<Section title='Education'>
